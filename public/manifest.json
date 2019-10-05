@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "快適な乗車",
+  "name": "不快指数を考慮した、快適な乗車体験をご提案",
   "icons": [
     {
       "src": "favicon.ico",
