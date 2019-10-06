@@ -3,8 +3,16 @@ html, body {
   padding: 0;
 }
 
+header {
+  height: 30px;
+}
+
+header h3 {
+  margin-top: 0px;
+}
+
 #map {
-  height: 100vh;
+  height: calc(100vh - 30px);
 }
 
 .leaflet-popup-content-wrapper {

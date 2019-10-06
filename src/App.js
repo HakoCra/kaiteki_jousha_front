@@ -28,6 +28,9 @@ class App extends React.Component {
 
     return (
       <div className="App">
+        <header>
+          <h3>公共交通機関を快適に利用する会</h3>
+        </header>
         <Map id="map" center={[41.8327605, 140.7515623]} zoom={13}>
           <TileLayer
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

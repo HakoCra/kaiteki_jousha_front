@@ -37,7 +37,7 @@ class CustomPopup extends React.Component {
     const { pin, data } = this.state;
     return (
       <Popup autoClose={false}>
-        <p>UUID: { pin.uuid }</p>
+        <p>UUID: { pin.uuid }, 気温: { pin.temperature }, 湿度: { pin.humidity }</p>
         <Line data={data} />
       </Popup>
     );
