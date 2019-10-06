@@ -11,6 +11,12 @@ header h3 {
   margin-top: 0px;
 }
 
+header a {
+  position: fixed;
+  top: 0px;
+  right: 15px;
+}
+
 #map {
   height: calc(100vh - 30px);
 }
@@ -22,4 +28,12 @@ header h3 {
 
 .leaflet-pane, .leaflet-tile, .leaflet-marker-icon, .leaflet-marker-shadow, .leaflet-tile-container, .leaflet-pane > svg, .leaflet-pane > canvas, .leaflet-zoom-box, .leaflet-image-layer, .leaflet-layer {
   left: -20px;
+}
+
+#about {
+  margin: 15px;
+}
+
+.inline {
+  display: inline;
 }

@@ -30,6 +30,7 @@ class App extends React.Component {
       <div className="App">
         <header>
           <h3>公共交通機関を快適に利用する会</h3>
+          <a href="#about">About</a>
         </header>
         <Map id="map" center={[41.8327605, 140.7515623]} zoom={13}>
           <TileLayer
