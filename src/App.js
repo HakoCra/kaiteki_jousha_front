@@ -24,7 +24,7 @@ class App extends React.Component {
   }
 
   render() {
-    const markers = this.state.now.map(data => <CustomMarker data={data} key={data._id} />);
+    const markers = this.state.now.map(pin => <CustomMarker pin={pin} key={pin._id} />);
 
     return (
       <div className="App">

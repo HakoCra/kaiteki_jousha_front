@@ -4,9 +4,11 @@
   "private": true,
   "homepage": "https://HacoCra.github.io/kaiteki_jousha_front",
   "dependencies": {
+    "chart.js": "^2.8.0",
     "gh-pages": "^2.1.1",
     "leaflet": "^1.5.1",
     "react": "^16.10.2",
+    "react-chartjs-2": "^2.8.0",
     "react-dom": "^16.10.2",
     "react-leaflet": "^2.4.0",
     "react-scripts": "3.2.0"

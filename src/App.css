@@ -6,3 +6,8 @@ html, body {
 #map {
   height: 100vh;
 }
+
+.leaflet-popup-content-wrapper {
+  height: 200px;
+  width: 300px;
+}

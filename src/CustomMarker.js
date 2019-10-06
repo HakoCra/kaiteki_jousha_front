@@ -1,20 +1,9 @@
 import React from 'react';
-import { Marker, Popup } from 'react-leaflet';
+import { Marker } from 'react-leaflet';
+import CustomPopup from './CustomPopup';
 
-class CustomMarker extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      data: props.data,
-    };
-  }
-
-  async componentDidMount() {
-    const res = await fetch(`https://fukai.mybluemix.net/get-history/${this.state.data.uuid}`)
-    const history = await res.json();
-  }
-
-  calcFukai(fukai) {
+function CustomMarker(props) {
+  const calcFukai = (fukai) => {
     if(fukai < 65) {
       return "🥶";
     } else if(65 <= fukai && fukai >= 70 ) {
@@ -24,16 +13,12 @@ class CustomMarker extends React.Component {
     }
   }
 
-  render() {
-    const { data } = this.state;
-    return (
-      <Marker position={data.position}>
-        <Popup>
-          <span role="emoji">{ data.fukai }{ this.calcFukai(data.fukai) }</span>
-        </Popup>
-      </Marker>
-    );
-  }
+  const { pin } = props;
+  return (
+    <Marker position={pin.position}>
+      <CustomPopup pin={pin} />
+    </Marker>
+  );
 }
 
 export default CustomMarker;
