@@ -10,7 +10,7 @@ function CustomMarker(props) {
       60 <= fukai && fukai >= 70 ? 'kaiteki' :
       'red';
     return new L.Icon({
-      iconUrl: `http://${window.location.host}/icons/marker-${color}.png`,
+      iconUrl: `http://${window.location.host}${window.location.pathname}/icons/marker-${color}.png`,
     });
   };
 
