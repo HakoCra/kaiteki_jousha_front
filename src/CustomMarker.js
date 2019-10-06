@@ -1,21 +1,21 @@
 import React from 'react';
 import { Marker } from 'react-leaflet';
+import L from 'leaflet';
 import CustomPopup from './CustomPopup';
 
 function CustomMarker(props) {
-  const calcFukai = (fukai) => {
-    if(fukai < 65) {
-      return "🥶";
-    } else if(65 <= fukai && fukai >= 70 ) {
-      return "🥰";
-    } else {
-      return "🥵";
-    }
-  }
-
   const { pin } = props;
+  const fukaiIcon = (fukai) => {
+    const color = fukai < 60 ? 'blue' :
+      60 <= fukai && fukai >= 70 ? 'kaiteki' :
+      'red';
+    return new L.Icon({
+      iconUrl: `http://${window.location.host}/icons/marker-${color}.png`,
+    });
+  };
+
   return (
-    <Marker position={pin.position}>
+    <Marker position={pin.position} icon={fukaiIcon(pin.fukai)}>
       <CustomPopup pin={pin} />
     </Marker>
   );

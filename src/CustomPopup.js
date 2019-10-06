@@ -30,14 +30,14 @@ class CustomPopup extends React.Component {
     const res = await fetch(`https://fukai.mybluemix.net/get-history/${this.state.pin.uuid}`)
     const history = await res.json();
     const data = await this.calcLine(history);
-    console.log(data);
     this.setState({ data });
   }
 
   render() {
-    const { data } = this.state;
+    const { pin, data } = this.state;
     return (
       <Popup>
+        <p>UUID: { pin.uuid }</p>
         <Line data={data} />
       </Popup>
     );
