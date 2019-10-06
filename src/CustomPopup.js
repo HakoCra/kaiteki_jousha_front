@@ -36,7 +36,7 @@ class CustomPopup extends React.Component {
   render() {
     const { pin, data } = this.state;
     return (
-      <Popup>
+      <Popup autoClose={false}>
         <p>UUID: { pin.uuid }</p>
         <Line data={data} />
       </Popup>
