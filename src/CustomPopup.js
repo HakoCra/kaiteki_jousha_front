@@ -1,6 +1,7 @@
 import React from 'react';
 import { Popup } from 'react-leaflet';
 import { Line } from 'react-chartjs-2';
+import moment from 'moment';
 
 class CustomPopup extends React.Component {
   constructor(props) {
@@ -12,7 +13,10 @@ class CustomPopup extends React.Component {
 
   calcLine(data) {
     return new Promise(resolve => {
-      const labels = data.map(datum => datum.created_at);
+      const labels = data.map(datum => {
+        const date = moment(datum.created_at);
+        return date.format('HH:mm:ss');
+      });
       const fukais = data.map(datum => datum.fukai);
 
       resolve({
