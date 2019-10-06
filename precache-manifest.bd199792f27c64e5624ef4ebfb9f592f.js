@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "afa0d86140ee1bf3a8fa69b648181997",
+    "revision": "2d3290f5f6ad2a9780c1f4b3a49d70bb",
     "url": "/kaiteki_jousha_front/index.html"
   },
   {
-    "revision": "a918ba9af84aa6135482",
+    "revision": "3db0484b7a80d07c520c",
     "url": "/kaiteki_jousha_front/static/css/main.1815d711.chunk.css"
   },
   {
-    "revision": "c85f03cb7019da8362ac",
-    "url": "/kaiteki_jousha_front/static/js/2.cad20368.chunk.js"
+    "revision": "e137a99a36ad187a0a88",
+    "url": "/kaiteki_jousha_front/static/js/2.a2aaac8e.chunk.js"
   },
   {
-    "revision": "a918ba9af84aa6135482",
-    "url": "/kaiteki_jousha_front/static/js/main.aa60b073.chunk.js"
+    "revision": "3db0484b7a80d07c520c",
+    "url": "/kaiteki_jousha_front/static/js/main.b280a2f0.chunk.js"
   },
   {
     "revision": "7344c0cfa284e26fea0f",
