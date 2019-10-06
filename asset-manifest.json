@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/kaiteki_jousha_front/static/css/main.f0b09313.chunk.css",
-    "main.js": "/kaiteki_jousha_front/static/js/main.6d42b90c.chunk.js",
-    "main.js.map": "/kaiteki_jousha_front/static/js/main.6d42b90c.chunk.js.map",
+    "main.css": "/kaiteki_jousha_front/static/css/main.1815d711.chunk.css",
+    "main.js": "/kaiteki_jousha_front/static/js/main.aa60b073.chunk.js",
+    "main.js.map": "/kaiteki_jousha_front/static/js/main.aa60b073.chunk.js.map",
     "runtime-main.js": "/kaiteki_jousha_front/static/js/runtime-main.6d40e17a.js",
     "runtime-main.js.map": "/kaiteki_jousha_front/static/js/runtime-main.6d40e17a.js.map",
-    "static/js/2.ab9cbe0d.chunk.js": "/kaiteki_jousha_front/static/js/2.ab9cbe0d.chunk.js",
-    "static/js/2.ab9cbe0d.chunk.js.map": "/kaiteki_jousha_front/static/js/2.ab9cbe0d.chunk.js.map",
+    "static/js/2.cad20368.chunk.js": "/kaiteki_jousha_front/static/js/2.cad20368.chunk.js",
+    "static/js/2.cad20368.chunk.js.map": "/kaiteki_jousha_front/static/js/2.cad20368.chunk.js.map",
     "index.html": "/kaiteki_jousha_front/index.html",
-    "precache-manifest.d9ad4d2ed6236950c91d12bbe5e5c7a0.js": "/kaiteki_jousha_front/precache-manifest.d9ad4d2ed6236950c91d12bbe5e5c7a0.js",
+    "precache-manifest.d6b1ee0b7375f6c28498b6d0bbcab29a.js": "/kaiteki_jousha_front/precache-manifest.d6b1ee0b7375f6c28498b6d0bbcab29a.js",
     "service-worker.js": "/kaiteki_jousha_front/service-worker.js",
-    "static/css/main.f0b09313.chunk.css.map": "/kaiteki_jousha_front/static/css/main.f0b09313.chunk.css.map"
+    "static/css/main.1815d711.chunk.css.map": "/kaiteki_jousha_front/static/css/main.1815d711.chunk.css.map"
   },
   "entrypoints": [
     "static/js/runtime-main.6d40e17a.js",
-    "static/js/2.ab9cbe0d.chunk.js",
-    "static/css/main.f0b09313.chunk.css",
-    "static/js/main.6d42b90c.chunk.js"
+    "static/js/2.cad20368.chunk.js",
+    "static/css/main.1815d711.chunk.css",
+    "static/js/main.aa60b073.chunk.js"
   ]
 }
