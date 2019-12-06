@@ -31,6 +31,7 @@ class CustomPopup extends React.Component {
   }
 
   async componentDidMount() {
+    console.log(this.state.pin);
     const res = await fetch(`https://fukai.mybluemix.net/get-history/${this.state.pin.uid}`)
     const history = await res.json();
     const data = await this.calcLine(history);
@@ -41,7 +42,7 @@ class CustomPopup extends React.Component {
     const { pin, data } = this.state;
     return (
       <Popup autoClose={false}>
-        <p>UUID: { pin.uuid }, 気温: { pin.temperature }, 湿度: { pin.humidity }</p>
+        <p>UID: { pin.uid }, 気温: { pin.temperature }, 湿度: { pin.humidity }</p>
         <Line data={data} />
       </Popup>
     );
