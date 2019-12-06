@@ -31,7 +31,7 @@ class CustomPopup extends React.Component {
   }
 
   async componentDidMount() {
-    const res = await fetch(`https://fukai.mybluemix.net/get-history/${this.state.pin.uuid}`)
+    const res = await fetch(`https://fukai.mybluemix.net/get-history/${this.state.pin.uid}`)
     const history = await res.json();
     const data = await this.calcLine(history);
     this.setState({ data });

@@ -7,12 +7,14 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      polling: true,
       now: [],
     };
   }
 
   async componentDidMount() {
     this.timer = setInterval(async() => {
+      if (!this.state.polling) return;
       const res = await fetch('https://fukai.mybluemix.net/now');
       const now = await res.json();
       this.setState({ now });
@@ -29,12 +31,18 @@ class App extends React.Component {
     await this.setState(obj);
 
     const { date, time } = this.state;
-    if (!date || !time) return;
+    if (!date || !time) {
+      this.setState({ polling: true });
+      return;
+    }
 
     const datetime = new Date(`${date} ${time}`);
     const res = await fetch(`https://fukai.mybluemix.net/at/${datetime.getTime()}`);
     const json = await res.json();
-    console.log(json);
+    this.setState({
+      now: json,
+      polling: false,
+    });
   }
 
   render() {
@@ -48,14 +56,12 @@ class App extends React.Component {
           <h3>公共交通機関を快適に利用する会</h3>
           <a href="#about">About</a>
         </header>
-        { null ?
         <Map id="map" center={[41.8327605, 140.7515623]} zoom={13}>
           <TileLayer
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
           { markers }
         </Map>
-        : null }
 
         <input type="date" name="date" onChange={this.revival} />
         <input type="time" name="time" onChange={this.revival} />
