@@ -23,8 +23,24 @@ class App extends React.Component {
     clearInterval(this.timer);
   }
 
+  revival = async(e) => {
+    const obj = {};
+    obj[e.target.name] = e.target.value;
+    await this.setState(obj);
+
+    const { date, time } = this.state;
+    if (!date || !time) return;
+
+    const datetime = new Date(`${date} ${time}`);
+    const res = await fetch(`https://fukai.mybluemix.net/at/${datetime.getTime()}`);
+    const json = await res.json();
+    console.log(json);
+  }
+
   render() {
-    const markers = this.state.now.map(pin => <CustomMarker pin={pin} key={pin._id} />);
+    const markers = this.state.now
+      .filter(pin => typeof pin.latitude !== "undefined" && typeof pin.longitude !== "undefined")
+      .map(pin => <CustomMarker pin={pin} key={pin._id} />);
 
     return (
       <div className="App">
@@ -32,12 +48,17 @@ class App extends React.Component {
           <h3>公共交通機関を快適に利用する会</h3>
           <a href="#about">About</a>
         </header>
+        { null ?
         <Map id="map" center={[41.8327605, 140.7515623]} zoom={13}>
           <TileLayer
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
           { markers }
         </Map>
+        : null }
+
+        <input type="date" name="date" onChange={this.revival} />
+        <input type="time" name="time" onChange={this.revival} />
       </div>
     );
   }

@@ -20,7 +20,7 @@ function fukaiIcon(fukai) {
 function CustomMarker(props) {
   const { pin } = props;
   return (
-    <Marker ref={initMarker} position={pin.position} icon={fukaiIcon(pin.fukai)}>
+    <Marker ref={initMarker} position={[pin.latitude, pin.longitude]} icon={fukaiIcon(pin.fukai)}>
       <CustomPopup pin={pin} />
     </Marker>
   );
