@@ -63,8 +63,10 @@ class App extends React.Component {
           { markers }
         </Map>
 
-        <input type="date" name="date" onChange={this.revival} />
-        <input type="time" name="time" onChange={this.revival} />
+        <form id="revival">
+          <input type="date" name="date" onChange={this.revival} />
+          <input type="time" name="time" onChange={this.revival} />
+        </form>
       </div>
     );
   }

@@ -13,7 +13,10 @@ function fukaiIcon(fukai) {
     60 <= fukai && fukai >= 70 ? 'kaiteki' :
     'red';
   return new L.Icon({
-    iconUrl: `https://${window.location.host}${window.location.pathname}/icons/marker-${color}.png`,
+    iconUrl: `http://${window.location.host}${window.location.pathname}/icons/marker-${color}.png`,
+    iconSize: [40, 40],
+    iconAnchor: [60, 40],
+    popupAnchor: [-60, -40],
   });
 };
 
