@@ -47,7 +47,7 @@ class CustomPopup extends React.Component {
     label === "co2" ? (
       emo = val <= 1500 ? "fine" : "poor"
     ) : "aaa"
-    const src = `/icons/face_${emo}.png`;
+    const src = `http://${window.location.host}${window.location.pathname}icons/face_${emo}.png`;
     return (
       <img src={src} class="face" alt={`emo_${emo}`} />
     );
