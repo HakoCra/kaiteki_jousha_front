@@ -48,3 +48,7 @@ header a {
   width: 400px;
   background: white;
 }
+
+img.face {
+  width: 25px;
+}

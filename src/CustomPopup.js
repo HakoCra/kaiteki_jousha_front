@@ -38,11 +38,32 @@ class CustomPopup extends React.Component {
     this.setState({ data });
   }
 
+  nicoIcon(label, val) {
+    console.log(label, val);
+    let emo = "";
+    emo = label === "fukai" ? (
+      60.0 < val && val <= 70.0 ? "fine" : "poor"
+    ) :
+    label === "co2" ? (
+      emo = val <= 1500 ? "fine" : "poor"
+    ) : "aaa"
+    const src = `/icons/face_${emo}.png`;
+    return (
+      <img src={src} class="face" alt={`emo_${emo}`} />
+    );
+  }
+
   render() {
     const { pin, data } = this.state;
     return (
       <Popup autoClose={false}>
-        <p>UID: { pin.uid }, 気温: { pin.temperature }, 湿度: { pin.humidity }</p>
+        <p>
+          UID: { pin.uid }<br />
+          気温: { pin.temperature }<br />
+          湿度: { pin.humidity }<br />
+          不快指数: { pin.fukai } { this.nicoIcon('fukai', pin.fukai) }<br />
+          二酸化炭素濃度: { pin.co2 } { this.nicoIcon('co2', pin.co2) }
+        </p>
         <Line data={data} />
       </Popup>
     );

@@ -8,22 +8,20 @@ function initMarker(ref) {
   ref.leafletElement.openPopup();
 }
 
-function fukaiIcon(fukai) {
-  const color = fukai < 60 ? 'blue' :
-    60 <= fukai && fukai >= 70 ? 'kaiteki' :
-    'red';
+function fukaiIcon(fukai, co2) {
+  const color = 60 < fukai && fukai <= 70 && co2 <= 1500 ? 'fine' : 'poor';
   return new L.Icon({
-    iconUrl: `http://${window.location.host}${window.location.pathname}/icons/marker-${color}.png`,
-    iconSize: [40, 40],
-    iconAnchor: [60, 40],
-    popupAnchor: [-60, -40],
+    iconUrl: `http://${window.location.host}${window.location.pathname}icons/icon_${color}.png`,
+    iconSize: [61, 33],
+    iconAnchor: [61, 33],
+    popupAnchor: [-38, -33],
   });
 };
 
 function CustomMarker(props) {
   const { pin } = props;
   return (
-    <Marker ref={initMarker} position={[pin.latitude, pin.longitude]} icon={fukaiIcon(pin.fukai)}>
+    <Marker ref={initMarker} position={[pin.latitude, pin.longitude]} icon={fukaiIcon(pin.fukai, pin.co2)}>
       <CustomPopup pin={pin} />
     </Marker>
   );
