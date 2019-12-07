@@ -31,7 +31,6 @@ class CustomPopup extends React.Component {
   }
 
   async componentDidMount() {
-    console.log(this.state.pin);
     const res = await fetch(`https://fukai.mybluemix.net/get-history/${this.state.pin.uid}`)
     const history = await res.json();
     const data = await this.calcLine(history);
@@ -39,7 +38,6 @@ class CustomPopup extends React.Component {
   }
 
   nicoIcon(label, val) {
-    console.log(label, val);
     let emo = "";
     emo = label === "fukai" ? (
       60.0 < val && val <= 70.0 ? "fine" : "poor"
