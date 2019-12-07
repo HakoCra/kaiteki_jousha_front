@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/kaiteki_jousha_front/precache-manifest.5fcd0ea6db56eb66c122bc80b05459ae.js"
+  "/kaiteki_jousha_front/precache-manifest.190d3e9576423f9d1e32ea0a68dd5b60.js"
 );
 
 self.addEventListener('message', (event) => {
