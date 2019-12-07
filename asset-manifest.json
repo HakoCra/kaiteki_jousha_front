@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/kaiteki_jousha_front/static/css/main.4c5d22f3.chunk.css",
-    "main.js": "/kaiteki_jousha_front/static/js/main.c582f9c9.chunk.js",
-    "main.js.map": "/kaiteki_jousha_front/static/js/main.c582f9c9.chunk.js.map",
+    "main.js": "/kaiteki_jousha_front/static/js/main.82860018.chunk.js",
+    "main.js.map": "/kaiteki_jousha_front/static/js/main.82860018.chunk.js.map",
     "runtime-main.js": "/kaiteki_jousha_front/static/js/runtime-main.6d40e17a.js",
     "runtime-main.js.map": "/kaiteki_jousha_front/static/js/runtime-main.6d40e17a.js.map",
     "static/js/2.7b243d97.chunk.js": "/kaiteki_jousha_front/static/js/2.7b243d97.chunk.js",
     "static/js/2.7b243d97.chunk.js.map": "/kaiteki_jousha_front/static/js/2.7b243d97.chunk.js.map",
     "index.html": "/kaiteki_jousha_front/index.html",
-    "precache-manifest.190d3e9576423f9d1e32ea0a68dd5b60.js": "/kaiteki_jousha_front/precache-manifest.190d3e9576423f9d1e32ea0a68dd5b60.js",
+    "precache-manifest.a19619d98527f76db50cda1eaf052179.js": "/kaiteki_jousha_front/precache-manifest.a19619d98527f76db50cda1eaf052179.js",
     "service-worker.js": "/kaiteki_jousha_front/service-worker.js",
     "static/css/main.4c5d22f3.chunk.css.map": "/kaiteki_jousha_front/static/css/main.4c5d22f3.chunk.css.map"
   },
@@ -16,6 +16,6 @@
     "static/js/runtime-main.6d40e17a.js",
     "static/js/2.7b243d97.chunk.js",
     "static/css/main.4c5d22f3.chunk.css",
-    "static/js/main.c582f9c9.chunk.js"
+    "static/js/main.82860018.chunk.js"
   ]
 }
